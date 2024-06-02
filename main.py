@@ -1,4 +1,4 @@
-from utils import get_popular_book,get_new_books,search_zlib
+from utils import get_popular_book,get_new_books,listdir_sorted_by_mtime,download_book
 from mail_utils import send_mail
 '''
 功能：
@@ -15,3 +15,5 @@ from mail_utils import send_mail
 #test_info1={'title': '不理想的妻子', 'author': '王欣', 'date': '2024-4', 'publisher': '人民文学出版社', 'url': 'https://book.douban.com/subject/36866737/'}
 #test_info2={'title': '食南之徒', 'author': '马伯庸', 'date': '2024-4-1', 'publisher': '湖南文艺出版社', 'url': 'https://book.douban.com/subject/36710597/'}
 #search_zlib(test_info2)
+book_to_download=get_new_books()[:2]
+download_book(book_to_download)
